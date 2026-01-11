@@ -1,0 +1,23 @@
+country_decisions = {
+
+	buffot_change_settings = {
+		major = yes
+		potential = {
+			
+		}
+
+		
+		effect = {
+			clr_global_flag = buffot_fire_starting_event
+            country_event = { 
+                id = buffot.1
+                days = 0
+                }
+            
+		}
+		ai_will_do = {
+			factor = 0      #never
+		}
+	}
+
+}

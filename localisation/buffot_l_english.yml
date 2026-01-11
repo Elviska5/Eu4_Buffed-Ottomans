@@ -1,0 +1,30 @@
+﻿l_english: 
+
+ 
+ #Events
+ buffot.1.1.1:0 "Buff for Ottomans"
+ buffot.1.1.2:0 "How much do we want to buff Ottomans?"
+ buffot.1.2.1:0 "Disable Mod"
+ buffot.1.2.2:0 "Small buff"
+ buffot.1.2.3:0 "Medium buff"
+ buffot.1.2.4:0 "Big buff"
+ buffot.1.2.5:0 "Let Turkey take over the World"
+ buffot.2.1.1:0 "We have received buff"
+ buffot.2.1.2:0 "Have have received some buff from god of universe."
+ buffot.2.2.1:0 "yay"
+ 
+ #Modifiers
+ #Country
+ buffot_modiffier_armageddon:0 "Armageddon level Ottoman Buff"
+ buffot_modiffier_armageddon_desc:0 "Tommorow se take the World!!!"
+ buffot_modiffier_big:0 "Big Ottoman Buff"
+ buffot_modiffier_big_desc:0 "Our nation was buffed lot"
+ buffot_modiffier_medium:0 "Medium Ottomans Buff"
+ buffot_modiffier_medium_desc:0 "We are buffed bit more"
+ buffot_modiffier_small:0 "Small Ottoman Buff"
+ buffot_modiffier_small_desc:0 "We are buffed a little"
+
+
+ #Decisions
+ buffot_change_settings_title:0 "Buffed Ottomans: Change Settings"
+ buffot_change_settings_desc:0 "Change settings of Buffed Ottomans mod"

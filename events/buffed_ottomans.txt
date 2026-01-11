@@ -1,0 +1,164 @@
+# made by Elviska/Klop6
+namespace = buffot
+
+
+
+
+#Starting Event
+country_event = {
+	id = buffot.1
+	title = buffot.1.1.1
+	desc = buffot.1.1.2
+	picture = ARTWORK_eventPicture
+	
+
+	
+	trigger = {
+		was_player = yes
+		AI = no
+		ai = no
+		NOT = { has_global_flag = buffot_fire_starting_event }
+	}
+    mean_time_to_happen = {
+	    months = -1
+    }
+	
+	#fire_only_once = yes		#cant be -> event must be able to be firem more
+
+	option = {	#disabled
+		name = buffot.1.2.1
+		set_global_flag = buffot_buff_disabled
+		set_global_flag = buffot_fire_starting_event
+		clr_global_flag = buffot_buff_small
+        clr_global_flag = buffot_buff_medium
+        clr_global_flag = buffot_buff_big
+        clr_global_flag = buffot_buff_armageddon
+        TUR = {
+            country_event = { 
+			id = buffot.2
+			days = 0
+			}
+        }
+	}
+	
+	option = {	#small
+		name = buffot.1.2.2
+		set_global_flag = buffot_buff_small
+		set_global_flag = buffot_fire_starting_event
+        clr_global_flag = buffot_buff_medium
+        clr_global_flag = buffot_buff_big
+        clr_global_flag = buffot_buff_armageddon
+		clr_global_flag = buffot_buff_disabled
+        TUR = {
+            country_event = { 
+			id = buffot.2
+			days = 0
+			}
+        }
+	}
+	option = {	#medium
+		name = buffot.1.2.3
+		set_global_flag = buffot_buff_medium
+		set_global_flag = buffot_fire_starting_event
+		clr_global_flag = buffot_buff_small
+        clr_global_flag = buffot_buff_big
+        clr_global_flag = buffot_buff_armageddon
+		clr_global_flag = buffot_buff_disabled
+        TUR = {
+            country_event = { 
+			id = buffot.2
+			days = 0
+			}
+        }
+	}
+    option = {	#big
+		name = buffot.1.2.4
+		set_global_flag = buffot_buff_big
+		set_global_flag = buffot_fire_starting_event
+		clr_global_flag = buffot_buff_small
+        clr_global_flag = buffot_buff_medium
+        clr_global_flag = buffot_buff_armageddon
+		clr_global_flag = buffot_buff_disabled
+        TUR = {
+            country_event = { 
+			id = buffot.2
+			days = 0
+			}
+        }
+	}
+    option = {	#armageddon
+		name = buffot.1.2.5
+		set_global_flag = buffot_buff_armageddon
+		set_global_flag = buffot_fire_starting_event
+		clr_global_flag = buffot_buff_small
+        clr_global_flag = buffot_buff_medium
+        clr_global_flag = buffot_buff_big
+		clr_global_flag = buffot_buff_disabled
+        TUR = {
+            country_event = { 
+			id = buffot.2
+			days = 0
+			}
+        }
+	}
+}
+
+#add buff
+country_event = {
+	id = buffot.2
+	title = buffot.2.1.1
+	desc = buffot.2.1.2
+	picture = ARTWORK_eventPicture
+	
+    is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+
+	option = {	#add buff
+		name = buffot.2.2.1
+        remove_country_modifier = buffot_modiffier_armageddon
+        remove_country_modifier = buffot_modiffier_big
+        remove_country_modifier = buffot_modiffier_medium
+        remove_country_modifier = buffot_modiffier_small
+		if = {
+			limit = {
+				has_global_flag = buffot_buff_armageddon
+			}
+			add_country_modifier = { 
+				name = buffot_modiffier_armageddon
+				duration = -1  
+			}
+		}
+        if = {
+			limit = {
+				has_global_flag = buffot_buff_big
+			}
+			add_country_modifier = { 
+				name = buffot_modiffier_big
+				duration = -1  
+			}
+		}
+        if = {
+			limit = {
+				has_global_flag = buffot_buff_medium
+			}
+			add_country_modifier = { 
+				name = buffot_modiffier_medium
+				duration = -1  
+			}
+		}
+        if = {
+			limit = {
+				has_global_flag = buffot_buff_small
+			}
+			add_country_modifier = { 
+				name = buffot_modiffier_small
+				duration = -1  
+			}
+		}
+	}
+
+}
